@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* primary color:rgb(49,65,153); */
+}
+
+
+
+.nav{
+    width: 100vw;
+    height: 9vh;
+    box-sizing: border-box;
+    padding-right: 1%;
+    padding-left: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    display: none;
+}
+.logo{
+    height: 100%;
+}
+
+.nav-input-container{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+.nav-input{
+    width: 28%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);;
+}
+.input-icon{
+    height: 70%;
+}
+.input{
+    width: 78%;
+    height: 100%;
+    border: none;
+}
+
+.nav-search-btn{
+    width: 16%;
+    height: 100%;
+    background-color: #0B8301;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+.input-btn{
+    background-color: transparent;
+    color: #FFF;
+    font-size: 3vh;
+}
+
+.nav-link-container{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.round-card{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 1px 7px rgba(22, 22, 22, 0.333);
+    border-radius: 50%;
+}
+.glob-img{
+    width: 70%;
+}
+.link-txt{
+    margin-left: 3px;
+    color: #000;
+}
+.link-icon{
+    width: 66%;
+}
+.login-link{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/747/747376.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* /////////////////////////////////////////////// */  
+/*                 Header                          */
+/* /////////////////////////////////////////////// */
+
+.header{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+.header-img{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*///////////////////// body ///////////////*/
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* align-items: center; */
+}
+.detailing-container{
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.sub-headings{
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+/* /////////////////////////////////////////////// */  
+/*                 heading and discription          */
+/* /////////////////////////////////////////////// */
+
+.heading{
+    width: 100%;
+    height: 48vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hotel-name{
+    font-size: 25px;
+    font-weight: 700;
+}
+.hotel-details{
+    font-size: 14px;
+    line-height: 3vh;
+    color: rgba(0, 0, 0, 0.5);
+}
+.select-btn{
+    width: 28%;
+    height: 6vh;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(49,65,153,.3);
+    border: none;
+    border-radius: 3px;
+    color: rgb(49,65,153);
+}
+.fav-icon{
+    width: 20%;
+    height: 60%;
+}
+
+.description{
+    font-size: 9px;
+    color: rgba(0, 0, 0, 0.836);
+    line-height: 2vh;
+}
+.view-btn{
+    width: 10%;
+    font-size: 14px;
+    color: rgb(49,65,153);
+    border: none;
+    background-color: #FFF;
+}
+
+/* /////////////////////////////////////////////// */  
+/*                 date container                   */
+/* /////////////////////////////////////////////// */
+
+.date-container{
+    width: 90%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.date-container-child{
+    width: 100%;
+    height: 13vh;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding-left: 60%; */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 3.5vh;
+}
+.date-details{
+    width: 60%;
+}
+.icons{
+    width: 20px;
+    padding: 10px;
+}
+.user-details{
+    width: 30%;
+}
+
+/* /////////////////////////////////////////////// */  
+/*                 Amenities container             */
+/* /////////////////////////////////////////////// */
+
+.amenities-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.amenities-items{
+    width: 30%;
+    height: 5vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons-amenity{
+    width: 20%;
+    height: 50%;
+}
+.main-btn{
+    width: 100%;
+    height: 6vh;
+    color: rgb(49,65,153);
+    border: 2px solid rgba(49,65,153,.5);
+    border-radius: 4px;
+    font-weight: 600;
+}
+.amenity-btn{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* what is your query */
+
+.query-container{
+    width: 100%;
+}
+.query-head{
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.query-btn{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20vw;
+    margin-top: 20px;
+}
+.msg-icon{
+    width: 10%;
+    height: 80%;
+    padding-right:5vw;
+}
+
+/* choose your room */
+
+.selecting-container{
+    width: 100%;
+    height: 30vh;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+.room-details{
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+.room-details-child{
+    width: 60%;
+    height: 60%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.room-type{
+    font-size: 17px;
+    font-weight: 600;
+}
+.room-type-details{
+    font-size: 12px;
+}
+.room-image{
+    width: 40%;
+    /* height: 60%; */
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+    background-size: cover;
+    border-radius: 3px;
+}
+.room-price{
+    width: 90%;
+    height: 10vh;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding-left: 20px;
+}
+.new-rate{
+    width: 10%;
+    font-size: 20px; 
+}
+.old-rate{
+    width: 20%;
+    font-size: 13px; 
+    text-decoration: line-through; 
+}
+.room-selection-btn{
+    width: 40%;
+    height: 5vh;
+    border-radius: 4px;
+    border: none;
+    background-color: #0B8301;
+    color: #FFF;
+    font-weight: 600;
+}
+
+/* Enjoy meals during your stay  */
+.meals-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.meals{
+    width: 40%;
+    height: 8vh;
+    display: flex;
+    border: 1px solid rgba(49,65,153,.5);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.meals-img{
+    width: 40%;
+    height: 8vh;
+    background-size: contain;
+}
+.meals-description{
+    width: 60%;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    line-height: 4vh;
+}
+.food{
+    font-size: 14px;
+}
+.food-rate{
+    font-size: 11px;
+}
+
+/* room rating */
+.room-rating{
+    width: 100%;
+    display: flex;
+}
+.current-rating{
+    width: 40%;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.rating-icons{
+    width: 70%;
+    height: 10vh;
+    background-color: royalblue;
+}
+.rating-card{
+    width: 80%;
+    height: 6vh;
+    background-color: #0B8301;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.star-icon{
+    width: 30%;
+    height: 40%;
+}
