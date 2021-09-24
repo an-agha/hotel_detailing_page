@@ -253,7 +253,7 @@
     color: rgb(49,65,153);
 }
 .fav-icon{
-    width: 20%;
+    width: 23%;
     height: 60%;
 }
 
@@ -496,7 +496,7 @@
     align-items: center;
 }
 .star-icon{
-    width: 30%;
+    width: 25%;
     height: 40%;
 }
 .rating-icons-container{
@@ -911,7 +911,7 @@ button:hover{
     }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px) and (orientation:landscape){
     .nav{
         display:inline-flex;
     }
