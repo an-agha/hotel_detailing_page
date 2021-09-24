@@ -332,6 +332,7 @@
     height: 6vh;
     color: rgb(49,65,153);
     border: 2px solid rgba(49,65,153,.5);
+    background-color: rgba(49, 65, 153, 0.137);
     border-radius: 4px;
     font-weight: 600;
 }
