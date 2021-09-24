@@ -4,9 +4,6 @@
     font-family: sans-serif;
     /* primary color:rgb(49,65,153); */
 }
-
-
-
 .nav{
     width: 100vw;
     height: 9vh;
@@ -29,7 +26,7 @@
 
 .nav-input-container{
     width: 70%;
-    height: 70%;
+    height: 80%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -37,7 +34,7 @@
     border-radius: 3px;
 }
 .nav-input{
-    width: 28%;
+    width: 30%;
     height: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -48,8 +45,9 @@
     height: 70%;
 }
 .input{
-    width: 78%;
+    width: 80%;
     height: 100%;
+    font-size: 9px;
     border: none;
 }
 
@@ -68,7 +66,7 @@
 }
 
 .nav-link-container{
-    width: 15%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -76,15 +74,16 @@
 }
 .nav-link{
     width: 40%;
-    height: 70%;
+    height: 60%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    font-size: 12px;
 }
 .round-card{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,24 +115,96 @@
 .header{
     width: 100%;
     height: 60vh;
+    overflow: hidden;
+}
+.anim-header{
+    width: 500%;
+    height: 60vh;
     display: flex;
+    flex-direction: row;
+
+    animation-name: slider;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 5s;
+    transition-delay: 20s;
 }
 .header-img{
-    width: 100%;
+    width: 20%;
     height: 100%;
-    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.header-img:nth-child(1){
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+}
+.header-img:nth-child(2){
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+}
+.header-img:nth-child(3){
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+}
+.header-img:nth-child(4){
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+}
+.header-img:nth-child(5){
+    background-image: url("https://images.oyoroomscdn.com/uploads/hotel_image/109276/large/1e487c0c52d8dc9d.jpg");
+}
+
+
+@keyframes slider {
+   
+    10%{
+        
+        margin-left:-100%;
+    }
+    20%{
+        margin-left:-100%;
+    }
+    30%{
+        margin-left:-200%;
+    }
+    40%{
+        
+        margin-left:-200%;
+    }
+    50%{
+        margin-left:-300%;
+    }
+    
+    60%{
+        margin-left:-300%;
+    }
+    70%{
+        margin-left:-300%;
+    }
+    80%{
+        margin-left:-400%;
+    
+    }
+    90%{
+        margin-left:-400%;
+    
+    }
+    /* 100%{
+        margin-left: -500%;
+    } */
+   
+    
+    }
+
+
 
 /*///////////////////// body ///////////////*/
 .main-container{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    justify-content: space-around;
     box-sizing: border-box;
-    /* align-items: center; */
+    padding-left: 5%;
 }
 .detailing-container{
     width: 90%;
@@ -141,6 +212,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
 }
 .sub-headings{
     font-size: 19px;
@@ -154,7 +226,7 @@
 
 .heading{
     width: 100%;
-    height: 48vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -187,7 +259,7 @@
 
 .description{
     font-size: 9px;
-    color: rgba(0, 0, 0, 0.836);
+    color: rgba(0, 0, 0, 0.726);
     line-height: 2vh;
 }
 .view-btn{
@@ -268,8 +340,9 @@
     margin-top: 10px;
     margin-bottom: 40px;
 }
-
-/* what is your query */
+/* /////////////////////////////////////////////// */  
+/*                 what is your query             */
+/* /////////////////////////////////////////////// */
 
 .query-container{
     width: 100%;
@@ -361,6 +434,7 @@
 }
 
 /* Enjoy meals during your stay  */
+
 .meals-container{
     width: 100%;
     display: flex;
@@ -371,7 +445,7 @@
     width: 40%;
     height: 8vh;
     display: flex;
-    border: 1px solid rgba(49,65,153,.5);
+    box-shadow: 0 3px 5px 0 #0003;
     border-radius: 3px;
     margin-bottom: 10px;
 }
@@ -397,9 +471,11 @@
 }
 
 /* room rating */
+
 .room-rating{
     width: 100%;
     display: flex;
+    margin-bottom: 4vh;
 }
 .current-rating{
     width: 40%;
@@ -409,11 +485,7 @@
     justify-content: space-around;
     align-items: center;
 }
-.rating-icons{
-    width: 70%;
-    height: 10vh;
-    background-color: royalblue;
-}
+
 .rating-card{
     width: 80%;
     height: 6vh;
@@ -426,4 +498,688 @@
 .star-icon{
     width: 30%;
     height: 40%;
+}
+.rating-icons-container{
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* price details */
+
+.card-container{
+    width: 90%;
+    height: 84vh;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.card-parent{
+    width: 100%;
+    height: 80vh;
+}
+.card-head{
+    width: 100%;
+    height: 8vh;
+    background-image: linear-gradient(to right, rgb(141, 8, 81) , rgb(255, 94, 0));
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card-btn{
+    width: 20%;
+    height: 4vh;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,.4);
+}
+.card-room-price{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.price-details{
+    width: 70%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+.card-room-filter{
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5%;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 2vh;
+}
+.room-offers{
+    width: 95%;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2vh 5%;
+}
+.checkbox{
+    width: 25%;
+    font-weight: 600;
+}
+.more-offer{
+    width: 40%;
+    height: 4vh;
+    background-color: #94fdc0c9;
+    border-radius: 2px;
+    border: 1px solid #77FC6B;
+}
+.your-savings{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1vh 5%;
+}
+.total-savings{
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+}
+.booking-btn{
+    width: 90%;
+    height: 6vh;
+    border-radius: 4px;
+    border: none;
+    margin: 2vh 5%;
+    color: #fff;
+    background-color: #0B8301;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* oyo similar rooms */
+
+.similar-room-container{
+    width: 100%;
+    height: 38vh;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.similar-rooms{
+    width: 45%;
+    height: 30vh;
+    box-shadow: 0 3px 5px 0 #0003;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.similar{
+    padding-left: 5%;
+}
+.room-images{
+  width: 100%;
+  height: 50%; 
+  background-size: contain;
+  display: flex;
+  align-items: flex-end;
+}
+.img-1{
+    background-image: url("https://www.amritlife.com/upload/blog/999574645781829568.jpg");
+}
+.img-2{
+    background-image: url("https://static.langimg.com/imagenext/nbtblogs/photo/astro/wp-content/uploads/2018/05/Badroom-640x479.jpg");
+}
+
+.similar-room-details{
+    width: 90%;
+    margin-top: 2vh;
+    font-size: 14px;
+   
+}
+.room-heading{
+    font-weight: 600;
+}
+.similar-room-rating{
+    width: 50%;
+    height: 30%;
+    font-size: 11px;
+    background-color: rgba(255,255,255,.7);
+    border: 1px solid white;
+    margin-bottom: 4px;
+}
+.similar-room-price{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* footer mobile */
+.footer-mobile{
+    width: 100%;
+    height: 9vh;
+    background-color: rgb(184, 243, 207);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.footer-item{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+/* /////////////////////////////////////////////// */  
+/*               footer desktop                    */
+/* /////////////////////////////////////////////// */
+
+.footer-desktop{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width:640px) and (orientation:landscape) {
+    .header{
+        height: 85vh;
+    }
+    .anim-header{
+        height: 85vh;
+    }
+    .sub-headings{
+        font-size: 22px;
+    }
+    .heading{
+        height: 80vh;
+    }
+    .select-btn{
+        width: 17%;
+        height: 8vh;
+    }
+    .description{
+        font-size: 14px;
+        line-height: 5vh;
+    }
+    .date-container{
+        height: 40vh;
+    }
+    .date-container-child{
+        height: 20vh;
+        line-height: 7vh;
+    }
+    .icons{
+        width: 30px;
+        padding: 20px;
+    }
+    .amenities-items{
+        height: 15vh;
+    }
+    .main-btn{
+        height: 13vh;
+    }
+    .amenity-btn{
+        font-size: 17px;
+    }
+    .query-head{
+        height: 30vh;
+    }
+    .selecting-container{
+        height: 70vh;
+    }
+    .room-details{
+        height: 50%;
+    }
+    .room-details-child{
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+    .room-type{
+        font-size: 20px;
+    }
+    .room-selection-btn{
+        height: 10vh;
+    }
+    .new-rate{
+        font-size: 25px; 
+    }
+    .old-rate{
+        width: 30%;
+        font-size: 19px; 
+    }
+    .meals{
+        height: 20vh;
+    }
+    .meals-img{
+        width: 50%;
+        height: 20vh;
+    }
+    .meals-description{
+        line-height: 8vh;
+    }
+    .food{
+        font-size: 20px;
+    }
+    .food-rate{
+        font-size: 17px;
+    }
+    .room-rating{
+        width: 80%;
+    }
+    .current-rating{
+        height: 30vh;
+    }
+    .rating-card{
+        width: 50%;
+        height: 12vh;
+    }
+    .rating-icons-container{
+        height: 20vh;
+    }
+    .rating-icons{
+        width: 12%;
+        height: 10vh;
+    }
+    .card-container{
+        height: 120vh;
+        margin-top: 10vh;
+    }
+    .card-parent{
+        width: 90%;
+        height: 100vh;
+    }
+    .card-head{
+        height: 13vh;;
+        font-size: 20px;
+    }
+    .card-btn{
+        width: 15%;
+        height: 8vh;
+    }
+    .card-room-price{
+        margin-top: 30px;
+    }
+    .price-details{
+        height: 13vh;
+    }
+    .card-room-filter{
+        height: 15vh;
+        font-size: 15px;
+    }
+    .room-offers{
+        height: 20vh;
+    }
+    .more-offer{
+        width: 30%;
+        height: 8vh;
+    }
+    .booking-btn{
+        width: 70%;
+        height: 9vh;
+        margin: 2vh 15%;
+    }
+    /* oyo similar rooms */
+
+    .similar-room-container{
+        height: 85vh;
+    }
+    .similar-rooms{
+        width: 33%;
+        height: 69vh;
+    }
+
+    .room-images{
+    height: 65%; 
+    }
+
+    .similar-room-details{
+        margin-top: 4vh;
+        font-size: 16px;
+    
+    }
+    .similar-room-rating{
+        width: 50%;
+        height: 25%;
+        font-size: 15px;
+    }
+    .similar-room-price{
+        height: 8vh;
+    }
+
+    .footer-mobile{
+        height: 18vh;
+    }
+    .footer-item{
+        width: 18%;
+    }
+            
+
+}
+
+@media screen and (min-width:720px) {
+    .current-rating{
+        width: 40%;
+        height: 12vh;
+    }
+    
+    .rating-card{
+        width: 60%;
+        height: 16vh;
+    }
+    .rating-icons{
+        height: 6vh;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .nav{
+        display:inline-flex;
+    }
+    .header{
+        height: 80vh;
+    }
+    .anim-header{
+        height: 100%;
+    }
+    .header-img{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main-container{
+        flex-direction: row;
+    }
+    .detailing-container{
+        width: 60%;
+        margin-left: 5%;
+    }
+    .sub-headings{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .heading{
+        height: 55vh;
+    }
+    .hotel-name{
+        font-size: 21px;
+    }
+    .hotel-details{
+        font-size: 12px;
+        line-height: 5vh;
+    }
+    .select-btn{
+        width: 20%;
+    }
+    
+    .description{
+        font-size: 10px;
+        line-height: 4vh;
+    }
+    .view-btn{
+        width: 5%;
+    }
+    .amenities-items{
+        width: 20%;
+        height: 10vh;
+    }
+    .main-btn{
+        width: 60%;
+        height: 8vh;
+        margin-left: 15%;
+    }
+    .amenity-btn{
+        width: 25%;
+        font-size: 13px;
+        border: none;
+        background-color: #FFF;
+        margin-left: 0;
+    }
+    .query-container{
+        display: none;
+    }
+
+    
+    .selecting-container{
+        height: 43vh;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .room-details-child{
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .room-type-details{
+        font-size: 10px;
+    }
+    .room-image{
+        width: 30%;
+        margin-left: 10%;
+    }
+    .room-price{
+        height: 5vh;
+    }
+    .new-rate{
+        font-size: 18px;
+    }
+    .old-rate{
+        width: 40%;
+        font-size: 13px;
+    }
+    .room-selection-btn{
+        width: 25%;
+        height: 5vh;
+    }
+
+
+    .meals{
+        height: 15vh;
+        margin-bottom: 15px;
+    }
+    .meals-img{
+        width: 50%;
+        height: 15vh;
+    }
+    .meals-description{
+        width: 50%;
+        line-height: 6vh;
+    }
+    .your-meal{
+        margin-bottom: 20px;
+    }
+    .food{
+        font-size: 16px;
+    }
+    .food-rate{
+        font-size: 13px;
+    }
+    .current-rating{
+        height: 23vh;
+    }
+    
+    .rating-card{
+        height: 10vh;
+    }
+    .rating-icons-container{
+        height: 20vh;
+
+    }
+    .rating-icons{
+        width: 20%;
+        height: 6vh;
+    } 
+
+    /* card */
+    
+    .card-container{
+        width: 40%;
+        position: sticky;
+        top: 76px;
+
+    }
+    .card-parent{
+        width: 75%;
+        height: 90vh;
+    }
+    .card-head{
+        height: 7vh;
+        font-size: 14px;
+    }
+    .card-btn{
+        width: 20%;
+        height: 5vh;
+    }
+    .price-details{
+        width: 90%;
+        height: 4vh;
+        font-size: 12px;
+    }
+    .card-room-filter{
+        font-size: 11px;
+    }
+    .room-offers{
+        height: 17vh;
+    }
+    .checkbox{
+        font-size: 14.5px;
+    }
+    .more-offer{
+        width: 30%;
+        height: 4vh;
+        font-size: 9px;
+    }
+    .your-savings{
+        font-size: 2px;
+    }
+    .savings{
+        font-size: 15px;
+    }
+    .booking-btn{
+        width: 88%;
+        height: 5vh;
+        margin: 4vh 6%;
+        font-size: 13px;
+    }
+    .similar-room-container{
+        margin-bottom: 10px;
+    }
+    .similar-rooms{
+        height: 50vh;
+        align-items: flex-start;
+    }
+    .room-images{
+        background-size: cover;
+        background-position: center;
+    }
+    .similar-room-rating{
+        width: 23%;
+        height: 18%;
+        font-size: 11px;
+    }
+    .similar-room-price{
+        width: 50%;
+        height: 5vh;
+        display: flex;
+        align-items: flex-start;
+        padding: 2vh;
+    }
+
+ 
+    .footer-mobile{
+        display:none;
+    }
+    .footer-desktop{
+        display: inline-box;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        background-color: rgb(72, 72, 75);
+        padding-bottom: 10vh;
+    }
+    .footer-download{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .footer-nav{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-terms{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .store{
+        width: 25%;
+        height: 40px;
+        border-radius: 2px;
+        background-color: black;
+        text-decoration: none;
+    }
+    .nav-child{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 8vh;
+    }
+    .child{
+        display: block;
+        align-items: center;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 10px;
+    }
+    .app-store{
+        box-sizing: border-box;
+        color: #fff;
+        margin-bottom: 2px;
+    }
+    
+    
 }
