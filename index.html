@@ -15,25 +15,49 @@
         <div class="nav-input-container">
             <div class="nav-input">
                 <input type="text" placeholder="Search by city, hotel, or neighborhood" class="input">
-                <img src="./image/near_me.png" alt="location" class="input-icon">
             </div>
-            <div class="nav-input">
-                    <input type="text" placeholder="Mon, 20 Sep - Tue, 21 Sep" class="input ">
-                <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="date" class="input-icon">
+            <div class="date-input-container">
+                <label for="date"> Check in-out</label>
+                <div class="date">
+                    <input type="date" id="checkIn" name="checkIn" style="border: none; font-size: 10pt; border-right: 1px solid #CCF; color: rgb(122, 122, 122);">
+                    <input type="date" id="checkOut" name="checkOut" style="border: none; font-size: 10pt; color: rgb(122, 122, 122);">
+                </div>
             </div>
-            <div class="nav-input" style="border-right: none;">
-                <input type="text" placeholder="1 Room, 1 Guest" class="input">
+            <div class="guest-container" style="border-right: none;">
+                <label for="guest">Guest</label>
+                <div class="guest">
+                    <div class="member">
+                        <select namet="adult"  class="adult-list"  class="member-list" style="border: none; width: 7vw; font-size: 10pt;color: rgb(121, 120, 120); "> 
+            
+                            <option value="Adult">Adult</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">7</option>
+                        </select>
+                        <select namet="children" name="children" class="children"  class="member-list" style="border: none; width: 7vw; font-size: 10pt; color: rgb(121, 120, 120);"> 
+                            <option value="Children">Children</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">7</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="nav-search-btn">
-                <input type="submit" value="Search" class="input input-btn">
-            </div>
+         
+           <button class="input-btn">Search</button>
         </div>
         <div class="nav-link-container">
             <div class="nav-link">
                 <div class="round-card">
-                    <img src="./image/glob-icon.png" alt="glob icon" class="glob-img">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="home icon" class="home-img">
                 </div>
-                <span class="link-txt" style="margin-top: -15px; font-size: 9pt">EN</span>
+                <span class="link-txt" style="font-size: 9pt">Home</span>
             </div>
             <div class="nav-link">
                 <div class="round-card login-link"></div>
@@ -67,113 +91,203 @@
                      Select
                 </button>
                 <span class="sub-headings">Description</span>
-                <span class="description">
+                <span class="description" id="viewLess">
                     Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the 
                     sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality 
                     cleaning pro3ducts₹1216 band maintaining social distance to using protective gear and more.
                 </span>
-                <button class="view-btn">More</button>
+                <span class="description more-des" id="viewMore">
+                    Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the 
+                    sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality 
+                    cleaning pro3ducts₹1216 band maintaining social distance to using protective gear and more.
+                    <br>
+                    Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the 
+                    sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality 
+                    cleaning pro3ducts₹1216 band maintaining social distance to using protective gear and more.  
+
+                    <br>
+                    Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the 
+                    sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality 
+                    cleaning pro3ducts₹1216 band maintaining social distance to using protective gear and more.  
+                </span>
+                <button class="view-btn" onclick="viewDis()" id="more">More</button>
             </div>
             
             <!-- date container -->
             <div class="date-container">
-                <span class="sub-headings">Date of travel & guests</span>
+                <span class="sub-headings date-head">Date of travel & guests</span>
                 <div class="date-container-child">
-                    <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="calender" class="icons">
-                    <span class="date-details">
-                        
-                        Today - Tomorrow <br>
-                        12:00PM - 11:00AM
-                    </span>
-                    <hr>
-                    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="user" class="icons">
-                    <span class="user-details">
-                        
-                        <span>1 Room <br>
-                            1 Guest</span>
-                    </span>
+                    <div class="select-date">
+                        <label for="date"> Check in-out</label>
+                        <div class="date">
+                            <input type="date" id="checkIn" name="checkIn" style="border: none;  border-right: 1px solid #CCF;" class="travel">
+                            <input type="date" id="checkOut" name="checkOut" style="border: none; " class="travel">
+                        </div>
+                    </div>
+                    <div class="select-member">
+                        <label for="guest">Guest</label>
+                        <div class="member">
+                            <select namet="adult"  class="travel"  class="member-list" style="border: none;  "> 
+                
+                                <option value="Adult">Adult</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">7</option>
+                            </select>
+                            <select namet="children" name="children" class="travel"  class="member-list" style="border: none;"> 
+                                <option value="Children">Children</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">7</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <!-- Amenities -->
-            <span class="sub-headings">Amenities</span>
+            <span class="sub-headings sub-head">Amenities</span>
             <div class="amenities-container">
                 <div class="amenities-items">
-                    <img src="https://cdn-icons-png.flaticon.com/512/748/748151.png" alt="wifi" class="icons-amenity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="wifi" class="icons-amenity">
                     <span class="item">
                         Wifi
                     </span>
                 </div>
                 <div class="amenities-items">
-                    <img src="https://cdn-icons-png.flaticon.com/512/259/259981.png" alt="AC" class="icons-amenity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="AC" class="icons-amenity">
                     <span class="item">
                         AC
                     </span>
                 </div>
                 <div class="amenities-items">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3159/3159461.png" alt="TV" class="icons-amenity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="TV" class="icons-amenity">
                     <span class="item">
                         TV
                     </span>
                 </div>
                 <div class="amenities-items">
-                    <img src="https://cdn-icons-png.flaticon.com/512/708/708387.png" alt="Geyser" class="icons-amenity">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="Geyser" class="icons-amenity">
+                    <span class="item">
+                        Geyser
+                    </span>
+                </div>
+                <div class="amenities-items">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="Geyser" class="icons-amenity">
+                    <span class="item">
+                        Geyser
+                    </span>
+                </div>
+                <div class="amenities-items">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="Geyser" class="icons-amenity">
+                    <span class="item">
+                        TV
+                    </span>
+                </div>
+                <div class="amenities-items">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="Geyser" class="icons-amenity">
+                    <span class="item">
+                        AC
+                    </span>
+                </div>
+                <div class="amenities-items">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="Geyser" class="icons-amenity">
                     <span class="item">
                         Geyser
                     </span>
                 </div>
             </div>
-            <button class="amenity-btn main-btn">View all amenities</button>
-
-            <!-- here is your query -->
-            <div class="query-container">
-                <span class="sub-headings">Have queries ? Here to help</span>
-                <button class="query-btn main-btn">
-                    <img src="./image/message.png" alt="message-icon" class="msg-icon"> 
-                    Chat With Us
-                </button>
-            </div>
 
             <!-- choose your room -->
-            <span class="sub-headings">Choose your room</span>
-            <div class="selecting-container">
+            <span class="sub-headings sub-head-room">Choose your room</span>
+            <div class="choose-room">
+                <div class="selecting-container">
 
-                <div class="room-details">
-
-                    <div class="room-details-child">
-                        <span class="room-type">Classic (2X) </span> <br>
-                        <span class="room-type-details">OYO Classic (2X)</span>
-                        
+                    <div class="room-details">
+    
+                        <div class="room-details-child">
+                            <span class="room-type">Classic (2X) </span> <br>
+                            <span class="room-type-details">OYO Classic (2X)</span>
+                            <div class="amenities-container-room">
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="wifi" class="icons-amenity">
+                                    <span class="item">
+                                        Wifi
+                                    </span>
+                                </div>
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="AC" class="icons-amenity">
+                                    <span class="item">
+                                        AC
+                                    </span>
+                                </div>
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="TV" class="icons-amenity">
+                                    <span class="item">
+                                        TV
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-image"></div>
+    
                     </div>
-                    <div class="room-image"></div>
-
+    
+                    
+                   
+    
+                    <div class="room-price">
+                        <div class="new-rate">₹1216</div>
+                        <div class="old-rate room-old-rate" >₹2315</div>
+                        <button class="room-selection-btn">SELECTED</button>
+                    </div>
                 </div>
-                <div class="amenities-container">
-                    <div class="amenities-items">
-                        <img src="https://cdn-icons-png.flaticon.com/512/748/748151.png" alt="wifi" class="icons-amenity">
-                        <span class="item">
-                            Wifi
-                        </span>
+    
+                <div class="selecting-container">
+
+                    <div class="room-details">
+    
+                        <div class="room-details-child">
+                            <span class="room-type">Classic (2X) </span> <br>
+                            <span class="room-type-details">OYO Classic (2X)</span>
+                            <div class="amenities-container-room">
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="wifi" class="icons-amenity">
+                                    <span class="item">
+                                        Wifi
+                                    </span>
+                                </div>
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="AC" class="icons-amenity">
+                                    <span class="item">
+                                        AC
+                                    </span>
+                                </div>
+                                <div class="amenities-items">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/709/709605.png" alt="TV" class="icons-amenity">
+                                    <span class="item">
+                                        TV
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-image"></div>
+    
                     </div>
-                    <div class="amenities-items">
-                        <img src="https://cdn-icons-png.flaticon.com/512/259/259981.png" alt="AC" class="icons-amenity">
-                        <span class="item">
-                            AC
-                        </span>
-                    </div>
-                    <div class="amenities-items">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3159/3159461.png" alt="TV" class="icons-amenity">
-                        <span class="item">
-                            TV
-                        </span>
+                    <div class="room-price">
+                        <div class="new-rate">₹1216</div>
+                        <div class="old-rate room-old-rate" >₹2315</div>
+                        <button class="room-selection-btn  select-room-btn">SELECT</button>
                     </div>
                 </div>
 
-                <div class="room-price">
-                    <div class="new-rate">₹1216</div>
-                    <div class="old-rate">₹2315</div>
-                    <button class="room-selection-btn">SELECTED</button>
-                </div>
             </div>
             
             <!-- Enjoy meals during your stay -->
@@ -181,54 +295,84 @@
             <div class="meals-container">
                 <div class="meals">
                     <img src="https://image.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg" alt="biryani" class="meals-img">
-                    <div class="meals-description">
-                        <span class="food">Biryani</span>
-                        <span class="food-rate">₹180</span>
+                    <div class="food-details">
+                        <div class="fd-name">Biryani</div>
+                        <div class="fd-rate">₹180.00-/</div>
+                        <div class="food-select">
+                            <input type="checkbox">
+                            <label for="checkbox" style="margin-left: 5px;">Select this food</label>
+                        </div>
                     </div>
-                </div>
+                </div>   
 
                 <div class="meals">
                     <img src="https://image.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg" alt="biryani" class="meals-img">
-                    <div class="meals-description">
-                        <span class="food">Biryani</span>
-                        <span class="food-rate">₹180</span>
+                    <div class="food-details">
+                        <div class="fd-name">Biryani</div>
+                        <div class="fd-rate">₹180.00-/</div>
+                        <div class="food-select">
+                            <input type="checkbox">
+                            <label for="checkbox" style="margin-left: 5px;">Select this food</label>
+                        </div>
                     </div>
-                </div>
+                </div>   
 
                 <div class="meals">
                     <img src="https://image.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg" alt="biryani" class="meals-img">
-                    <div class="meals-description">
-                        <span class="food">Biryani</span>
-                        <span class="food-rate">₹180</span>
+                    <div class="food-details">
+                        <div class="fd-name">Biryani</div>
+                        <div class="fd-rate">₹180.00-/</div>
+                        <div class="food-select">
+                            <input type="checkbox">
+                            <label for="checkbox" style="margin-left: 5px;">Select this food</label>
+                        </div>
                     </div>
-                </div>
+                </div>   
 
                 <div class="meals">
                     <img src="https://image.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg" alt="biryani" class="meals-img">
-                    <div class="meals-description">
-                        <span class="food">Biryani</span>
-                        <span class="food-rate">₹180</span>
+                    <div class="food-details">
+                        <div class="fd-name">Biryani</div>
+                        <div class="fd-rate">₹180.00-/</div>
+                        <div class="food-select">
+                            <input type="checkbox">
+                            <label for="checkbox" style="margin-left: 5px;">Select this food</label>
+                        </div>
                     </div>
-                </div>
+                </div>   
+            
             </div>
 
+            
             <!-- Ratings and reviews -->
-            <span class="sub-headings">Ratings and reviews</span>
+            <span class="sub-headings sub-rating">Ratings and reviews</span>
             <div class="room-rating">
                 <div class="current-rating">
                     <div class="rating-card">
                         <img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="star icon" class="star-icon">
                         <span style="color: white; font-weight: 600; font-size: 25px;">4.0</span>
                     </div>
-                    <span style="color: #000; font-size:17px;">GOOD</span>
-                    <span style="color: #000; font-size: 12px;">631 Rating </span>
+                    <span style="color: #000; font-size:10pt;">GOOD</span>
+                    <span style="color: #000; font-size: pt;">631 Rating </span>
                 </div>
                 <div class="rating-icons-container">
-                    <div class="rating-icons"><img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="" width="60%"></div>
-                    <div class="rating-icons"><img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="" width="60%"></div>
-                    <div class="rating-icons"><img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="" width="60%"></div>
-                    <div class="rating-icons"><img src="https://cdn-icons-png.flaticon.com/512/148/148839.png" alt="" width="60%"></div>
-                    <div class="rating-icons"><img src="https://cdn-icons-png.flaticon.com/512/149/149220.png" alt="" width="60%"></div>
+                    <div class="review">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="user icon" width="30px" height="30px">
+                        <div class="user-review">
+                            <span class="user-name">User Name</span>
+                            <span class="review-dis">Hotel staff behaviour and hospitality was best when comapred to others. </span> 
+                        </div>
+                    </div>  
+
+                    <div class="review">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="user icon" width="30px" height="30px">
+                        <div class="user-review">
+                            <span class="user-name">User Name</span>
+                            <span class="review-dis">Hotel staff behaviour and hospitality was best when comapred to others. </span> 
+                        </div>
+                    </div>  
+
+                    
                 </div>
             </div>
         </div>
@@ -246,19 +390,50 @@
                     <div class="price-details">
                         <div class="new-rate">₹1216</div>
                         <div class="old-rate">₹2315</div>
-                        <div style="color: rgb(192, 148, 2); font-size: 14px;">47% Off</div>
+                        <div style="color: rgb(192, 148, 2); font-size: 12pt; margin-right: 3vw;">47% Off</div>
                     </div>
                     <div style="font-size: 12px;font-weight: 600; color: rgba(0, 0, 0, 0.5);">inclusive of all taxes</div>
                 </div>
 
                 <div class="card-room-filter">
-                   <div class="selected-date">Mon, 20 Sep - Tue, 21 Sep</div>
-                   <div class="room-members">1 Room, 1 Guest</div>
+                    <div class="selected-date">
+                        <label for="date"> Check in-out</label> 
+                        <div class="date-card">
+                            <input type="date" id="checkIn" name="checkIn" style="border: none; font-size: 9pt; border-right: 1px solid #CCF; background-color: transparent; ">
+                            <input type="date" id="checkOut" name="checkOut" style="border: none; font-size: 9pt; background-color: transparent; ">
+                        </div>
+                   </div>
+                   <div class="room-members">
+                    <div class="guest-card">
+                        <label for="guest">Guest</label>
+                        <div class="card-member">
+                            <select namet="adult"  class="adult-list"  class="member-list" style="border: none; font-size: 9pt; background-color: transparent; "> 
+                
+                                <option value="Adult">Adult</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">7</option>
+                            </select>
+                            <select namet="children" name="children" class="children"  class="member-list" style="border: none;  font-size: 9pt;  background-color: transparent;"> 
+                                <option value="Children">Children</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">7</option>
+                            </select>
+                        </div> 
+                     </div> 
+                   </div>
                    <div class="selected-room-type">Classic (2X) </div>
                 </div>
                 
                 <div class="room-offers">
-                    <span style="font-size: 14px;font-weight: 600; width: 60%;">FINDOYO coupon applied</span>
+                    <span style="font-size: 10pt;font-weight: 600; width: 60%;">FINDOYO coupon applied</span>
                     <div class="checkbox">
                         <label for="offer";>-₹405</label>
                         <input type="checkbox" id="offer" name="offer">
@@ -267,16 +442,16 @@
                 </div>
                 <div class="your-savings">
                     <div class="total-savings">
-                        <span style="font-size: 16px; font-weight: 500;">Your savings</span>
+                        <span style="font-weight: 500;" class="savings">Your savings</span>
                         <span class="savings">₹405</span>
                     </div>
-                    <div class=" total price total-savings">
-                        <span style="font-size: 16px; font-weight: 500;">Total price</span>
+                    <div class=" total-price total-savings">
+                        <span style=" font-weight: 500;" class="savings">Total price</span>
                         <span class="savings">₹1216</span>
                     </div>
-                    <span style="font-size: 10px;">(incl. of all taxes)</span>
+                    <span style="font-size: 7pt;">(incl. of all taxes)</span>
                 </div>
-                <button class="booking-btn">Continue to Book</button>
+                <button class="booking-btn" style="border: none;">Continue to Book</button>
             </div>
         </div>
     </div>
@@ -290,9 +465,9 @@
             </div>
             <span class="similar-room-details room-heading">OYO 71234 Hotel Shyam</span>
             <div class="similar-room-price">
-                <div class="current-rate" style="font-weight: 600;">₹1216</div>
-                <div class="old-rate">₹2315</div>
-                <div style="color: rgb(192, 148, 2); font-size: 15px;">47% Off</div>
+                <div class="similar-room-rate">₹1216</div>
+                <div class="similar-room-old">₹2315</div>
+                <div style="color: rgb(192, 148, 2)"; class="similar-off">47% Off</div>
             </div>
         </div>
         <div class="similar-rooms">
@@ -301,11 +476,34 @@
             </div>
             <span class="similar-room-details room-heading">OYO 71234 Hotel Shyam</span>
             <div class="similar-room-price">
-                <div class="current-rate" style="font-weight: 600;">₹1216</div>
-                <div class="old-rate">₹2315</div>
-                <div style="color: rgb(192, 148, 2); font-size: 15px;">47% Off</div>
+                <div class="similar-room-rate">₹1216</div>
+                <div class="similar-room-old">₹2315</div>
+                <div style="color: rgb(192, 148, 2)"; class="similar-off">47% Off</div>
             </div>
         </div>
+        <div class="similar-rooms">
+            <div class=" room-images img-1">
+                <div class="similar-room-rating">★ 3.2 <br> (192 Reviews)</div>
+            </div>
+            <span class="similar-room-details room-heading">OYO 71234 Hotel Shyam</span>
+            <div class="similar-room-price">
+                <div class="similar-room-rate">₹1216</div>
+                <div class="similar-room-old">₹2315</div>
+                <div style="color: rgb(192, 148, 2)"; class="similar-off">47% Off</div>
+            </div>
+        </div>
+        <div class="similar-rooms">
+            <div class=" room-images img-1">
+                <div class="similar-room-rating">★ 3.2 <br> (192 Reviews)</div>
+            </div>
+            <span class="similar-room-details room-heading">OYO 71234 Hotel Shyam</span>
+            <div class="similar-room-price">
+                <div class="similar-room-rate">₹1216</div>
+                <div class="similar-room-old">₹2315</div>
+                <div style="color: rgb(192, 148, 2)"; class="similar-off">47% Off</div>
+            </div>
+        </div>
+        
     </div>
 
     <!-- footer mobile -->
@@ -334,15 +532,15 @@
             <a href="" class="app-store-btn store">
                 <img src="data:image/png;base64,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" alt="apple-icon" width="25%">
                 <div class="app-store">
-                    <span style="font-size:10px; height: 2px;">Download on the</span> <br>
-                    <span style="font-size: 16px;">App Store</span>
+                    <span style="font-size:8pt; height: 1px;">Download on the</span> <br>
+                    <span style="font-size: 11pt;">App Store</span>
                 </div>
             </a>
             <a href="" class="play-store store">
                 <img src="./image/play_store-removebg-preview.png" alt="playstore-icon" width="25%">
                 <div class="app-store">
-                    <span style="font-size:10px; height: 2px;">Get it on</span> <br>
-                    <span style="font-size: 16px;">Google Play</span>
+                    <span style="font-size:8pt; height: 1px;">Get it on</span> <br>
+                    <span style="font-size: 11pt;">Google Play</span>
                 </div>
             </a>
         </div>
@@ -372,4 +570,26 @@
 
 
 </body>
+<script>
+    function viewDis()
+{
+    var view_more = document.getElementById("viewMore");
+    var view_less = document.getElementById("viewLess");
+    var btn_more = document.getElementById("more");
+
+  if (view_more.style.display === "none")
+   {
+    view_more.style.display = "inline";
+    btn_more.innerHTML = "Less"; 
+    view_less.style.display = "none";
+  }
+   else 
+   {
+    view_more.style.display = "none";
+    btn_more.innerHTML = "More"; 
+    view_less.style.display = "inline";   
+}
+
+}
+</script>
 </html>

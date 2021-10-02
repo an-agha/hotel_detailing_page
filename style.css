@@ -11,7 +11,7 @@
     padding-right: 1%;
     padding-left: 3%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
@@ -28,41 +28,66 @@
     width: 70%;
     height: 80%;
     display: flex;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
-.nav-input{
-    width: 30%;
-    height: 70%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);;
-}
+
 .input-icon{
     height: 70%;
 }
-.input{
-    width: 80%;
+.nav-input{
+    width: 25%;
     height: 100%;
-    font-size: 13px;
     border: none;
+    display: flex;
+    justify-content: space-around;
+    border-right: 1px solid #ccf;
+}
+.input{
+    width: 100%;
+    font-size: 9pt;
+    border: none;
+    margin-left: 2vw;
+}
+.date-input-container{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 9pt;
+    border-right: 1px solid #ccf;
 }
 
-.nav-search-btn{
-    width: 16%;
+.date{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.guest-container{
+    width: 30%;
     height: 100%;
-    background-color: #0B8301;
-    border-radius: 3px;
-    cursor: pointer;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 9pt;
+    align-items: center;
+    justify-content: space-around;
+}
+.member{
+    display: flex;
+    justify-content: space-around;
 }
 .input-btn{
-    background-color: transparent;
+    width: 15%;
+    height: 100%;
+    background-color: rgb(49,65,153);
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     color: #FFF;
-    font-size: 3vh;
 }
 
 .nav-link-container{
@@ -79,7 +104,7 @@
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 9pt;
 }
 .round-card{
     width: 30px;
@@ -87,10 +112,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -5px 1px 7px rgba(22, 22, 22, 0.333);
+    box-shadow: -5px 1px 7px rgba(22, 22, 22, 0.2);
     border-radius: 50%;
+    background-color: #A2D5F1;
 }
-.glob-img{
+.home-img{
     width: 70%;
 }
 .link-txt{
@@ -160,30 +186,30 @@
         
         margin-left:-100%;
     }
-    /* 20%{
+    20%{
         margin-left:-100%;
-    } */
+    }
     30%{
         margin-left:-200%;
     }
-    /* 40%{
+    40%{
         
         margin-left:-200%;
-    } */
+    }
     50%{
         margin-left:-300%;
     }
     
-    /* 60%{
+    60%{
         margin-left:-300%;
-    } */
+    }
     70%{
         margin-left:-300%;
     }
-    /* 80%{
+    80%{
         margin-left:-400%;
     
-    } */
+    }
     90%{
         margin-left:-400%;
     
@@ -204,7 +230,8 @@
     flex-direction: column;
     justify-content: space-around;
     box-sizing: border-box;
-    padding-left: 5%;
+    /* padding-left: 5%; */
+    align-items: center;
 }
 .detailing-container{
     width: 90%;
@@ -212,21 +239,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     
 }
 .sub-headings{
     font-size: 19px;
     font-weight: 600;
     margin-top: 40px;
-    margin-bottom: 20px;
 }
+
 /* /////////////////////////////////////////////// */  
 /*                 heading and discription          */
 /* /////////////////////////////////////////////// */
 
 .heading{
     width: 100%;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -234,11 +261,13 @@
 .hotel-name{
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 2vh;
 }
 .hotel-details{
     font-size: 14px;
     line-height: 3vh;
     color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2vh;
 }
 .select-btn{
     width: 28%;
@@ -258,9 +287,14 @@
 }
 
 .description{
+    width: 100%;
     font-size: 9px;
     color: rgba(0, 0, 0, 0.726);
     line-height: 2vh;
+    margin: 2vh 0;
+}
+.more-des{
+    display: none;
 }
 .view-btn{
     width: 10%;
@@ -268,6 +302,7 @@
     color: rgb(49,65,153);
     border: none;
     background-color: #FFF;
+    /* margin-top: 5vh; */
 }
 
 /* /////////////////////////////////////////////// */  
@@ -275,53 +310,65 @@
 /* /////////////////////////////////////////////// */
 
 .date-container{
-    width: 90%;
+    width: 95%;
     height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+   
 }
 .date-container-child{
     width: 100%;
-    height: 13vh;
+    height: 10vh;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* padding-left: 60%; */
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     font-size: 13px;
     line-height: 3.5vh;
 }
-.date-details{
-    width: 60%;
+.select-date{
+    width: 58%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 1px solid #CCF;
 }
-.icons{
-    width: 20px;
-    padding: 10px;
+.select-member{
+    width: 38%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.user-details{
-    width: 30%;
+.travel{
+    font-size: 6pt;
 }
+
 
 /* /////////////////////////////////////////////// */  
 /*                 Amenities container             */
 /* /////////////////////////////////////////////// */
 
 .amenities-container{
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .amenities-items{
-    width: 30%;
+    width: 25%;
     height: 5vh;
     margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+}
+.item{
+    margin-left: 5px;
+    font-size: 9pt;
 }
 .icons-amenity{
     width: 20%;
@@ -336,48 +383,27 @@
     border-radius: 4px;
     font-weight: 600;
 }
-.amenity-btn{
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-/* /////////////////////////////////////////////// */  
-/*                 what is your query             */
-/* /////////////////////////////////////////////// */
-
-.query-container{
-    width: 100%;
-}
-.query-head{
-    width: 100%;
-    height: 10vh;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-}
-
-.query-btn{
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 20vw;
-    margin-top: 20px;
-}
-.msg-icon{
-    width: 10%;
-    height: 80%;
-    padding-right:5vw;
+.sub-head{
+    margin-left: -60vw;
 }
 
 /* choose your room */
-
+.choose-room{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-head-room{
+    margin-left: -40vw;
+}
 .selecting-container{
     width: 100%;
-    height: 30vh;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 3px;
+    margin: 3vh 0;
 }
+
 .room-details{
     width: 100%;
     height: 40%;
@@ -396,7 +422,7 @@
     font-weight: 600;
 }
 .room-type-details{
-    font-size: 12px;
+    font-size: 6pt;
 }
 .room-image{
     width: 40%;
@@ -405,8 +431,11 @@
     background-size: cover;
     border-radius: 3px;
 }
+.amenities-container-room{
+    display: flex;
+}
 .room-price{
-    width: 90%;
+    width: 97%;
     height: 10vh;
     font-weight: 600;
     display: flex;
@@ -417,11 +446,11 @@
 }
 .new-rate{
     width: 10%;
-    font-size: 20px; 
+    font-size: 15pt; 
 }
 .old-rate{
     width: 20%;
-    font-size: 13px; 
+    font-size: 10px; 
     text-decoration: line-through; 
 }
 .room-selection-btn{
@@ -429,9 +458,18 @@
     height: 5vh;
     border-radius: 4px;
     border: none;
-    background-color: #0B8301;
+    background-color: rgb(49,65,153);
     color: #FFF;
     font-weight: 600;
+}
+.select-room-btn{
+    color: rgb(49,65,153);
+    background-color: white;
+    border: 1px solid #96deffea;
+}
+.amenities-room-items{
+    display: flex;
+    flex-direction: row;
 }
 
 /* Enjoy meals during your stay  */
@@ -441,46 +479,60 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 3vh;
 }
 .meals{
-    width: 40%;
-    height: 8vh;
+    width: 90%;
+    height: 15vh;
     display: flex;
-    box-shadow: 0 3px 5px 0 #0003;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    border: 1px solid #CCF;
+    border-radius: 2px;
+    margin-bottom: 2vh;
 }
 .meals-img{
-    width: 40%;
-    height: 8vh;
+    width: 45%;
+    height: 100%;
     background-size: contain;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
 }
-.meals-description{
-    width: 60%;
-    height: 8vh;
+.food-details{
+    width: 55%;
+    height: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 5%;
     font-weight: 600;
-    line-height: 4vh;
 }
-.food{
-    font-size: 14px;
+.fd-name{
+    font-size: 13pt;
 }
-.food-rate{
-    font-size: 11px;
+.fd-rate{
+    font-size: 9pt;
 }
-
+.food-select{
+    display: flex;
+    align-items: center;
+    font-size: 9pt;
+    font-weight: 500;
+}
+.your-meal{
+    margin-left: -10vw;
+}
 /* room rating */
-
+.sub-rating{
+    margin-left: -33vw;
+}
 .room-rating{
     width: 100%;
     display: flex;
     margin-bottom: 4vh;
 }
 .current-rating{
-    width: 40%;
-    height: 14vh;
+    width: 30%;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -501,11 +553,28 @@
     height: 40%;
 }
 .rating-icons-container{
-    width: 70%;
-    height: 10vh;
+    width: 60%;
+}
+.review{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 4vh;
+}
+.user-review{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.user-name{
+    font-size: 13pt;
+    font-weight: 600;
+    color: rgb(70, 70, 69);
+    margin-bottom: 1vh;
+}
+.review-dis{
+    font-size: 10pt;
+    color: #383838;
 }
 
 /* price details */
@@ -524,12 +593,13 @@
 .card-head{
     width: 100%;
     height: 8vh;
-    background-image: linear-gradient(to right, rgb(141, 8, 81) , rgb(255, 94, 0));
+    /* background-image: linear-gradient(to right, rgb(141, 8, 81) , rgb(255, 94, 0)); */
+    background-image: linear-gradient(to  right,#170055,#185ADB);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     color: #fff;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13pt;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -556,17 +626,35 @@
 }
 .card-room-filter{
     width: 95%;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
     padding-left: 5%;
-    font-size: 13px;
+    font-size: 11pt;
     font-weight: 600;
     margin-top: 2vh;
 }
+.selected-dates{
+    width: 45%;
+    display: flex;
+}
+.room-members{
+    width: 50%;
+}
+.date-card{
+    width: 100%;
+}
+.gust-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
 .room-offers{
     width: 95%;
     height: 15vh;
@@ -584,9 +672,9 @@
 .more-offer{
     width: 40%;
     height: 4vh;
-    background-color: #94fdc0c9;
+    background-color: #5ce0f169;
     border-radius: 2px;
-    border: 1px solid #77FC6B;
+    border: 1px solid #3EDBF0;
 }
 .your-savings{
     width: 100%;
@@ -594,7 +682,7 @@
     padding: 1vh 5%;
 }
 .total-savings{
-    font-size: 17px;
+    font-size: 13pt;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -608,8 +696,8 @@
     border: none;
     margin: 2vh 5%;
     color: #fff;
-    background-color: #0B8301;
-    font-size: 15px;
+    background-color: rgb(49,65,153);
+    font-size: 12pt;
     font-weight: 600;
 }
 
@@ -617,13 +705,13 @@
 /* oyo similar rooms */
 
 .similar-room-container{
-    width: 100%;
-    height: 38vh;
+    width: 95%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-left: 2.5%;
+    margin-bottom: 20vh;
 }
 .similar-rooms{
     width: 45%;
@@ -633,6 +721,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 4vh 0;
 }
 .similar{
     padding-left: 5%;
@@ -643,6 +732,8 @@
   background-size: contain;
   display: flex;
   align-items: flex-end;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 .img-1{
     background-image: url("https://www.amritlife.com/upload/blog/999574645781829568.jpg");
@@ -654,7 +745,7 @@
 .similar-room-details{
     width: 90%;
     margin-top: 2vh;
-    font-size: 14px;
+    font-size: 10pt;
    
 }
 .room-heading{
@@ -663,7 +754,7 @@
 .similar-room-rating{
     width: 50%;
     height: 30%;
-    font-size: 11px;
+    font-size: 8pt;
     background-color: rgba(255,255,255,.7);
     border: 1px solid white;
     margin-bottom: 4px;
@@ -674,13 +765,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-weight: 600;
+}
+.similar-room-rate{
+    font-size: 12pt;
+}
+.similar-room-old{
+    font-size: 8pt;
+    text-decoration: line-through;
+}
+.similar-off{
+    font-size: 10pt;
 }
 
 /* footer mobile */
 .footer-mobile{
     width: 100%;
     height: 9vh;
-    background-color: rgb(193, 243, 212);
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid #CCF;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -695,7 +798,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-size: 13px;
+    font-size: 8pt;
 }
 a{
     width: 100%;
@@ -729,21 +832,18 @@ button:hover{
         height: 85vh;
     }
     .sub-headings{
-        font-size: 22px;
-    }
-    .heading{
-        height: 80vh;
+        font-size: 16pt;
     }
     .select-btn{
         width: 17%;
         height: 8vh;
     }
     .description{
-        font-size: 14px;
-        line-height: 5vh;
+        font-size: 9pt;
+        line-height: 6vh;
     }
     .date-container{
-        height: 40vh;
+        height: 30vh;
     }
     .date-container-child{
         height: 20vh;
@@ -756,56 +856,58 @@ button:hover{
     .amenities-items{
         height: 15vh;
     }
+    .sub-head{
+        margin-left: -68vw;
+    }
     .main-btn{
         height: 13vh;
     }
-    .amenity-btn{
-        font-size: 17px;
-    }
+    
     .query-head{
         height: 30vh;
     }
+    .sub-head-room{
+        margin-left: -60vw;
+    }
     .selecting-container{
-        height: 70vh;
+        height: 55vh;
     }
     .room-details{
-        height: 50%;
+        height: 60%;
     }
     .room-details-child{
         padding-left: 20px;
         padding-top: 30px;
     }
     .room-type{
-        font-size: 20px;
+        font-size: 15pt;
     }
     .room-selection-btn{
         height: 10vh;
     }
     .new-rate{
-        font-size: 25px; 
+        font-size: 16pt; 
+    }
+    .room-price{
+        margin-top: 10vh;
     }
     .old-rate{
         width: 30%;
-        font-size: 19px; 
+        font-size: 11pt; 
+    }
+    .your-meal{
+        margin-left: -40vw;
     }
     .meals{
-        height: 20vh;
+       width: 45%;
+       height: 25vh;
     }
-    .meals-img{
-        width: 50%;
-        height: 20vh;
-    }
-    .meals-description{
-        line-height: 8vh;
-    }
-    .food{
-        font-size: 20px;
-    }
-    .food-rate{
-        font-size: 17px;
+
+    .sub-rating{
+        margin-left: -55vw;
     }
     .room-rating{
-        width: 80%;
+        width: 100%;
     }
     .current-rating{
         height: 30vh;
@@ -814,24 +916,22 @@ button:hover{
         width: 50%;
         height: 12vh;
     }
-    .rating-icons-container{
-        height: 20vh;
-    }
+   
     .rating-icons{
         width: 12%;
         height: 10vh;
     }
     .card-container{
-        height: 120vh;
-        margin-top: 10vh;
+        height: 130vh;
+        margin: 10vh 0;
     }
     .card-parent{
         width: 90%;
-        height: 100vh;
+        height: 120vh;
     }
     .card-head{
         height: 13vh;;
-        font-size: 20px;
+        font-size: 14pt;
     }
     .card-btn{
         width: 15%;
@@ -844,11 +944,11 @@ button:hover{
         height: 13vh;
     }
     .card-room-filter{
-        height: 15vh;
-        font-size: 15px;
+        height: 25vh;
+        font-size: 11pt;
     }
     .room-offers{
-        height: 20vh;
+        height: 25vh;
     }
     .more-offer{
         width: 30%;
@@ -857,12 +957,11 @@ button:hover{
     .booking-btn{
         width: 70%;
         height: 9vh;
-        margin: 2vh 15%;
+        margin: 4vh 15%;
     }
     /* oyo similar rooms */
-
     .similar-room-container{
-        height: 85vh;
+        justify-content: space-between;
     }
     .similar-rooms{
         width: 33%;
@@ -875,13 +974,13 @@ button:hover{
 
     .similar-room-details{
         margin-top: 4vh;
-        font-size: 16px;
+        font-size: 11pt;
     
     }
     .similar-room-rating{
-        width: 50%;
-        height: 25%;
-        font-size: 15px;
+        width: 40%;
+        height: 20%;
+        font-size: 9pt;
     }
     .similar-room-price{
         height: 8vh;
@@ -907,9 +1006,7 @@ button:hover{
         width: 60%;
         height: 16vh;
     }
-    .rating-icons{
-        height: 6vh;
-    }
+
 }
 
 @media screen and (min-width:1024px) and (orientation:landscape){
@@ -929,69 +1026,95 @@ button:hover{
     }
     .main-container{
         flex-direction: row;
+
     }
     .detailing-container{
         width: 60%;
         margin-left: 5%;
     }
     .sub-headings{
-        font-size: 23px;
+        font-size: 16pt;
         margin-bottom: 8px;
     }
-    .heading{
-        height: 55vh;
+    .sub-head{
+        margin-left: -53vw;
     }
+    .sub-head-room{
+        margin-left: -48vw;
+        margin-bottom: 3vh;
+    }
+    .date-head{
+        margin-left: -2vw;
+    }
+    .travel{
+        font-size: 12pt;
+    }
+    .your-meal{
+        margin-left: -41vw;
+        margin-bottom: 3vh;
+    }
+    .sub-rating{
+        margin-left: -100vh;
+        margin-bottom: 3vh;
+    }
+
     .hotel-name{
-        font-size: 26px;
+        font-size: 20pt;
     }
     .hotel-details{
-        font-size: 20px;
+        font-size: 13pt;
         line-height: 5vh;
     }
     .select-btn{
         width: 20%;
-        font-size: 20px;
+        font-size: 14pt;
     }
     
     .description{
-        font-size: 15px;
+        font-size: 11pt;
         line-height: 4vh;
     }
     .view-btn{
         width: 5%;
-        font-size: 16px;
+        font-size: 14pt;
     }
 
     .date-container-child{
-        font-size: 20px;
+        height: 14vh;
+        font-size: 14pt;
     }
-
+/* amenities */
+    .amenities-container{
+        width: 85%;
+         height: 20vh;
+    }
     .amenities-items{
-        width: 20%;
-        height: 7vh;
+        width: 25%;
+        height: 6vh;
+
+    }
+    .icons-amenity{
+        width: 18px;
+        height: 18px;
+    }
+    .item{
+        font-size: 14pt;
     }
     .main-btn{
         width: 60%;
         height: 8vh;
         margin-left: 15%;
     }
-    .amenity-btn{
-        width: 25%;
-        font-size: 19px;
-        border: none;
-        background-color: #FFF;
-        margin-left: 0;
-    }
-    .query-container{
-        display: none;
-    }
-
+/* oyo room */
+    
     .similar{
         padding-left: 10%;
     }
     .selecting-container{
-        height: 43vh;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 80%;
+        height: 25vh;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        margin-left: -5vw;
     }
     .room-details-child{
         padding-left: 20px;
@@ -1005,116 +1128,122 @@ button:hover{
         margin-left: 10%;
     }
     .room-price{
-        height: 5vh;
+        margin-top: 1vh;
     }
     .new-rate{
-        font-size: 25px;
+        font-size: 15pt;
     }
     .old-rate{
-        width: 25%;
-        font-size: 17px;
+        font-size: 10pt;
+    }
+    .room-old-rate{
+        width: 55%;
     }
     .room-selection-btn{
         width: 25%;
         height: 6vh;
     }
     .room-heading{
-        font-size: 25px;
+        font-size: 11pt;
     }
-
-
+/* your meals */
     .meals{
-        height: 15vh;
-        margin-bottom: 15px;
+        height: 13vh;
     }
-    .meals-img{
-        width: 50%;
-        height: 15vh;
-    }
-    .meals-description{
-        width: 50%;
-        line-height: 6vh;
-    }
-    .your-meal{
-        margin-bottom: 20px;
-    }
-    .food{
-        font-size: 20px;
-    }
-    .food-rate{
-        font-size: 18px;
-    }
-    .current-rating{
-        height: 23vh;
+    .meals-container{
+        margin-top: 1vh;
     }
     
     .rating-card{
-        height: 10vh;
+        height: 8vh;
+        width: 40%;
     }
-    .rating-icons-container{
-        height: 20vh;
-
+    .user-review{
+        width: 90%;
     }
     .rating-icons{
         width: 20%;
         height: 6vh;
     } 
+    .fd-name{
+        font-size: 15pt;
+    }
+    .fd-rate{
+        font-size: 11pt;
+    }
 
     /* card */
     
     .card-container{
-        width: 40%;
+        width: 35%;
+        height: 100%;
         position: sticky;
-        top: 76px;
-
+        top: 0;
+        bottom: 0;
+       
     }
     .card-parent{
         width: 75%;
-        height: 90vh;
+        height: 78vh;
+        /* border: .8px solid #CCF; */
+        border-radius: 5px;
+        box-shadow: -2px 1px 7px rgba(22, 22, 22, 0.333);
     }
     .card-head{
         height: 7vh;
-        font-size: 19px;
+        font-size: 12pt;
     }
     .card-btn{
         width: 20%;
         height: 5vh;
+        font-size: 9pt;
+    }
+    .card-room-price{
+        width: 90%;
+        justify-content: space-evenly;
     }
     .price-details{
         width: 90%;
-        height: 4vh;
-        font-size: 18px;
+        height: 5vh;
+        font-size: 14pt;
     }
     .card-room-filter{
-        font-size: 16px;
+        height: 18vh;
+        font-size: 13pt;
     }
     .room-offers{
-        height: 17vh;
+        height: 5vh;
+        font-size: 8pt;
     }
     .checkbox{
-        font-size: 17px;
+        font-size: 9pt;
     }
     .more-offer{
         width: 30%;
         height: 4vh;
-        font-size: 12px;
+        font-size: 7pt;
+        margin-top: 1vh;
     }
     .your-savings{
-        font-size: 2px;
+        margin-top: 5vh;
     }
     .savings{
-        font-size: 18px;
+        font-size: 13pt;
     }
     .booking-btn{
-        width: 88%;
-        height: 5vh;
+        width: 90%;
+        height: 6vh;
         margin: 4vh 6%;
-        font-size: 16px;
+        font-size: 14pt;
+    }
+    .current-rating{
+        height: 16vh;
     }
     .similar-room-container{
         margin-bottom: 10px;
     }
     .similar-rooms{
+        width: 23%;
         height: 50vh;
         align-items: flex-start;
     }
@@ -1123,21 +1252,38 @@ button:hover{
         background-position: center;
     }
     .similar-room-rating{
-        width: 23%;
-        height: 18%;
-        font-size: 14px;
+        width: 35%;
+        height: 20%;
+        font-size: 9pt;
         padding-left: 8px;
     }
     .similar-room-price{
-        width: 60%;
+        width: 70%;
         height: 5vh;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         padding: 2vh;
+        align-items: center;
+    }
+    .similar-room-details{
+        margin-left: 8px;
+    }
+    .similar-room-rate{
+        font-size: 18pt;
+    }
+    .similar-room-old{
+        font-size: 12pt;
+        text-decoration: line-through;
+    }
+    .similar-off{
+        font-size: 14pt;
+    }
+    .similar{
+        margin-left: -7vw;
     }
     .current-rate{
-        font-size: 24px;
+        font-size: 20pt;
     }
 
  
@@ -1192,7 +1338,7 @@ button:hover{
         align-items: center;
         text-decoration: none;
         color: #FFF;
-        font-size: 14px;
+        font-size:12pt;
     }
     .app-store{
         display: flex;
